@@ -1,0 +1,68 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: fix/updatego
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda.ai.mcp.cdc:
+      branch: main
+      repo: https://github.com/cessda/cessda.ai.mcp.cdc
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda.ai.mcp.cdc git:
+        commands:
+        - /usr/bin/env sh .sqa/script.rose_mysterious_koala.sh
+        container: qc.acc_ash_sympathetic_gorilla
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda.ai.mcp.cdc find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.maroon_imaginative_moose.sh
+        container: qc.doc_flint_sad_coyote
+      github.com/cessda/cessda.ai.mcp.cdc git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gray_supportive_porpoise.sh
+        container: qc.doc_ivory_skeptical_otter
+      github.com/cessda/cessda.ai.mcp.cdc markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.turmeric_hardworking_walrus.sh
+        container: qc.doc_sapphire_mischievous_pegasus
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda.ai.mcp.cdc licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.onyx_humorous_cheetah.sh
+        container: qc.lic_ivory_funny_moth
+  QC.Sec:
+    repos:
+      github.com/cessda/cessda.ai.mcp.cdc bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.horizon_anxious_spren.sh
+        container: qc.sec_denim_realistic_caribou
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda.ai.mcp.cdc flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.orchid_passionate_griffin.sh
+        container: qc.sty_yellow_restless_coyote
+      github.com/cessda/cessda.ai.mcp.cdc hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cornflower_courageous_hyena.sh
+        container: qc.sty_royal_smart_python
+  QC.Uni:
+    repos:
+      github.com/cessda/cessda.ai.mcp.cdc pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.lapis_gentle_marmoset.sh
+        container: qc.uni_dawn_articulate_gecko
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda.ai.mcp.cdc get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.kiwi_sympathetic_ocelot.sh
+        container: qc.ver_ginger_resourceful_hedgehog
+timeout: 5400
