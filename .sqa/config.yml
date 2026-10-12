@@ -15,54 +15,54 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda.ai.mcp.cdc git:
         commands:
-        - /usr/bin/env sh .sqa/script.rose_mysterious_koala.sh
-        container: qc.acc_ash_sympathetic_gorilla
+        - /usr/bin/env sh .sqa/script.yellow_innocent_nighthawk.sh
+        container: qc.acc_cardamom_supportive_baboon
   QC.Doc:
     repos:
       github.com/cessda/cessda.ai.mcp.cdc find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.maroon_imaginative_moose.sh
-        container: qc.doc_flint_sad_coyote
+        - /usr/bin/env sh .sqa/script.saffron_dreamy_chimpanzee.sh
+        container: qc.doc_marigold_respectful_hippopotamus
       github.com/cessda/cessda.ai.mcp.cdc git:
         commands:
-        - /usr/bin/env sh .sqa/script.gray_supportive_porpoise.sh
-        container: qc.doc_ivory_skeptical_otter
+        - /usr/bin/env sh .sqa/script.fandango_loving_giraffe.sh
+        container: qc.doc_polar_spirited_kirin
       github.com/cessda/cessda.ai.mcp.cdc markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.turmeric_hardworking_walrus.sh
-        container: qc.doc_sapphire_mischievous_pegasus
+        - /usr/bin/env sh .sqa/script.ice_exuberant_hornbill.sh
+        container: qc.doc_cloud_open_porpoise
   QC.Lic:
     repos:
       github.com/cessda/cessda.ai.mcp.cdc licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.onyx_humorous_cheetah.sh
-        container: qc.lic_ivory_funny_moth
+        - /usr/bin/env sh .sqa/script.olive_decisive_raccoon.sh
+        container: qc.lic_paprika_diplomatic_platypus
   QC.Sec:
     repos:
       github.com/cessda/cessda.ai.mcp.cdc bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.horizon_anxious_spren.sh
-        container: qc.sec_denim_realistic_caribou
+        - /usr/bin/env sh .sqa/script.poppy_stoic_buffalo.sh
+        container: qc.sec_ceru_honest_spider
   QC.Sty:
     repos:
       github.com/cessda/cessda.ai.mcp.cdc flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.orchid_passionate_griffin.sh
-        container: qc.sty_yellow_restless_coyote
+        - /usr/bin/env sh .sqa/script.silver_smart_tapir.sh
+        container: qc.sty_indigo_philosophical_chinchilla
       github.com/cessda/cessda.ai.mcp.cdc hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.cornflower_courageous_hyena.sh
-        container: qc.sty_royal_smart_python
+        - /usr/bin/env sh .sqa/script.paprika_lucky_mink.sh
+        container: qc.sty_wheat_stubborn_hornbill
   QC.Uni:
     repos:
       github.com/cessda/cessda.ai.mcp.cdc pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.lapis_gentle_marmoset.sh
-        container: qc.uni_dawn_articulate_gecko
+        - /usr/bin/env sh .sqa/script.harlequin_careful_badger.sh
+        container: qc.uni_brown_nurturing_camel
   QC.Ver:
     repos:
       github.com/cessda/cessda.ai.mcp.cdc get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.kiwi_sympathetic_ocelot.sh
-        container: qc.ver_ginger_resourceful_hedgehog
+        - /usr/bin/env sh .sqa/script.paprika_vibrant_buffalo.sh
+        container: qc.ver_grape_dizzy_turtle
 timeout: 5400
